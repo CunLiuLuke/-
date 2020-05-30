@@ -59,16 +59,16 @@ while(regulate==0):
     regulate=input('请检查一下，正确输入非0的数字')
 
 print("两个多项式和为：")
-a=max(p1.maxpower,p2.maxpower)
-for i in range(a+1):
+p3.maxpower=max(p1.maxpower,p2.maxpower)
+for i in range(p3.maxpower+1):
     ppterm=p1.correspondingTerms(i)+p2.correspondingTerms(i)
     if(ppterm!=0):
         p3.head=Node(ppterm,i,p3.head)
 p3.printf()
 
 print("两个多项式积为：")
-a=p1.maxpower+p2.maxpower
-for i in range(a+1):
+p4.maxpower=p1.maxpower+p2.maxpower
+for i in range(p4.maxpower+1):
     ppterm=0
     for j in range(i+1):
         ppterm+=p1.correspondingTerms(j)*p2.correspondingTerms(i-j)
